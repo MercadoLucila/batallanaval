@@ -8,7 +8,7 @@ class Tablero{
     }
 
     crearTablero(){
-        let tabla= '<table>';
+        let tabla= '<table class="tabla2">';
         for(let i=1; i<this.tuplas; i++){
             tabla=tabla+'<tr id="'+i+'" >';
             for(let j=1; j<this.columnas; j++){

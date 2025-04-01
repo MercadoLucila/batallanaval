@@ -1,0 +1,39 @@
+* {
+    transition: all 1s;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    background-color: aquamarine;
+}
+
+.tabla2{
+    background-color: aliceblue;
+    margin: auto;
+}
+
+.tabla2 td{
+    border: rgba(0, 0, 0, 0.25) 1px solid;
+}
+
+.central{
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+}
+
+.box1{
+    margin: auto;
+}
+
+.box2{
+    margin: auto;
+}
+
+table{
+    margin: auto;
+}
