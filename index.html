@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Vistas/styles.css">
+    <title>Batalla Naval</title>
+</head>
+<body>
+    <h1>Batalla Naval</h1>
+    <div>
+        <h3>Elegir barco</h3>
+        <div>
+            <div>
+                <table>
+                    <tr><td>Cant. barcos a posicionar</td>
+                        <td id="cantidad_barcos_total"></td>
+                    </tr>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Tamaño</td>
+                        <td>Cantidad</td>
+                    </tr>
+                    <tr>
+                        <td>Grande</td>
+                        <td>6 celdas</td>
+                        <td id="cantidad_grande">1</td>
+                        <td><button value="grande" onclick="elegirBarco(this)" >Colocar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Mediano</td>
+                        <td>3 celdas</td>
+                        <td id="cantidad_mediano">2</td>
+                        <td><button value="mediano" onclick="elegirBarco(this)" >Colocar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Chico</td>
+                        <td>2 celdas</td>
+                        <td id="cantidad_chico">2</td>
+                        <td><button value="chico" onclick="elegirBarco(this)" >Colocar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Barquito</td>
+                        <td>1 celda</td>
+                        <td id="cantidad_barquito">1</td>
+                        <td><button value="barquito" onclick="elegirBarco(this)" >Colocar</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div>
+        <h2>Sitúa tus barcos</h2>
+        <p id="colocacion">Aun no has elegido ningun barco para colocar</p>
+        <div id="tablero"></div>
+    </div>
+    <script src="Vistas/script.js" ></script>
+    
+</body>
+</html>
+
