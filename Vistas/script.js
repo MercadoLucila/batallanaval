@@ -1,12 +1,10 @@
 class Tablero{
     tuplas;
     columnas;
-    posiciones=[];
 
-    constructor (tuplas,columnas,posiciones){
+    constructor (tuplas,columnas){
         this.tuplas=tuplas;
         this.columnas=columnas;
-        this.posiciones=posiciones;
     }
 
     crearTablero(){
@@ -22,24 +20,13 @@ class Tablero{
         console.log(tabla);
         document.getElementById("tablero").innerHTML = tabla;
         
-        ocultarBotones();
-
-
-    }
-
-    ocultarBotones() {
         const div = document.getElementById('tablero');
         const botones = div.getElementsByTagName('button');
         for (let i = 0; i < botones.length; i++) {
           botones[i].style.display = 'none';
         }
-    }
-      
 
-    cargarPosicion(posicion){
-        this.posiciones.push(posicion);
-    }
-
+    } 
 
 }
 
@@ -59,9 +46,6 @@ class Posicion{
     }
 
 }
-
-const tablero = new Tablero(7,15,);
-tablero.crearTablero();
 
 class Barco{
     tipo;
@@ -93,18 +77,55 @@ class Barco{
 
 }
 
-function elegirBarco(valor){
+const tablero = new Tablero(7,14);
+tablero.crearTablero();
+let barco;
+let posiciones= [];
 
+function elegirBarco(valor){
+    const div = document.getElementById('tablero');
+        const botones = div.getElementsByTagName('button');
+        for (let i = 0; i < botones.length; i++) {
+          botones[i].style.display = '';
+        }
     tipo = valor.value;
-    const barco = new Barco(tipo);
+    let barco = new Barco(tipo);
     console.log(barco.tipo, barco.grande, barco.ancho);
+
+    for (let i = 0; i < botones.length; i++) {
+        botones[i].setAttribute('data-barco', JSON.stringify(barco));
+    }
 }
 
 function situar(celda){
+    let barcoData = celda.closest('#tablero').querySelector('button').getAttribute('data-barco');
+
+    if (!barcoData) {
+        console.error("No hay un barco seleccionado.");
+        return;
+    }
+    let barco = JSON.parse(barcoData);
+
+    console.log(barco);
     tupla = celda.getAttribute('data-tupla');
     columna = celda.getAttribute('data-columna');
-    console.log(tupla, columna);
     posicion=new Posicion(tupla,columna,barco.tipo,barco.grande,barco.ancho);
     console.log(posicion);
-    cargarPosicion(posicion);
+    posiciones.push(posicion);
+    console.log(posiciones);
+
+    const div = document.getElementById('tablero');
+        const botones = div.getElementsByTagName('button');
+        /*for(let i = 0; i<botones.length;i++){
+            fila=botones[i].getAttribute('data-tupla');
+            colum=botones[i].getAttribute('data-celda')
+            if()
+        }
+            */
+        
 }
+
+/*for (let i = 0; i < botones.length; i++) {
+    botones[i].style.display = '';
+}
+    
