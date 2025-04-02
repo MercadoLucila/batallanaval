@@ -7,16 +7,19 @@
     <title>Batalla Naval</title>
 </head>
 <body>
-    <h1>Batalla Naval</h1>
-    <div class="central">
+    
+    <div class="contenedor">
         
-        <div class="box1">
-            <h3>Elegir barco</h3>
-            <div>
-                <table>
+        <div>
+            <div class="box1">
+                <h1>Batalla Naval</h1>
+                <h3>Elegir barco</h3>
+                <table class="cant">
                     <tr><td>Cant. barcos a posicionar</td>
                         <td id="cantidad_barcos_total"></td>
                     </tr>
+                </table>
+                <table class="datos">
                     <tr>
                         <td>Nombre</td>
                         <td>Tamaño</td>
@@ -44,13 +47,16 @@
                         <td>Barquito</td>
                         <td>1 celda</td>
                         <td id="cantidad_barquito">1</td>
-                        <td><button value="barquito" onclick="elegirBarco(this)" >Colocar</button></td>
+                        <td><button value="barquito" data-image="img4" onclick="elegirBarco(this)" >Colocar</button></td>
+                        <img id="img4" src="Vistas/imagenes/barquito.png" alt="Imagen para mover" class="movable-image" />
+
                     </tr>
                 </table>
             </div>
+            
         </div>
         <div class="box2">
-            <h2>Sitúa tus barcos</h2>
+            <h3>Sitúa tus barcos</h3>
             <p id="colocacion">Aun no has elegido ningun barco para colocar</p>
             <div id="tablero"></div>
         </div>
