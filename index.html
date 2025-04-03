@@ -3,68 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Vistas/styles.css">
-    <title>Batalla Naval</title>
+    <link rel="stylesheet" href="Vistas/index.css">
+    <title>Document</title>
 </head>
 <body>
-    
-    <div class="contenedor">
-        
-        <div>
-            <div class="box1">
-                <h1>Batalla Naval</h1>
-                <h3>Elegir barco</h3>
-                <table class="cant">
-                    <tr><td>Cant. barcos a posicionar</td>
-                        <td id="cantidad_barcos_total"></td>
-                    </tr>
-                </table>
-                <table class="datos">
-                    <tr>
-                        <td>Nombre</td>
-                        <td>Tamaño</td>
-                        <td>Cantidad</td>
-                    </tr>
-                    <tr>
-                        <td>Grande</td>
-                        <td>6 celdas</td>
-                        <td id="cantidad_grande">1</td>
-                        <td><button value="grande" onclick="elegirBarco(this)" >Colocar</button></td>
-                    </tr>
-                    <tr>
-                        <td>Mediano</td>
-                        <td>3 celdas</td>
-                        <td id="cantidad_mediano">2</td>
-                        <td><button value="mediano" onclick="elegirBarco(this)" >Colocar</button></td>
-                    </tr>
-                    <tr>
-                        <td>Chico</td>
-                        <td>2 celdas</td>
-                        <td id="cantidad_chico">2</td>
-                        <td><button value="chico" onclick="elegirBarco(this)" >Colocar</button></td>
-                    </tr>
-                    <tr>
-                        <td>Barquito</td>
-                        <td>1 celda</td>
-                        <td id="cantidad_barquito">1</td>
-                        <td><button value="barquito" data-image="img4" onclick="elegirBarco(this)" >Colocar</button></td>
-                        <img id="img4" src="Vistas/imagenes/barquito.png" alt="Imagen para mover" class="movable-image" />
-
-                    </tr>
-                </table>
+    <div class="box1">
+        <div class="menu">
+            <div>
+                <img src="Vistas/imagenes/Titulo.png" alt="">
+                <h3>Selecciona modo de juego</h3>
+                <a href="2jugadores.html" data-description="Juegas con un amigo por turnos. Gana quien hunda la flota en la menor cantidad de intentos." >Dos jugadores</a>
+                <a href="" aria-disabled="true" data-description="No habilitado. Intenta hundir la flota enemiga antes de que el temporizador llegue a 0.">Un jugador</a>
+                <a href="" aria-disabled="true">Personalizada</a>
             </div>
-            
         </div>
-        <div class="box2">
-            <h3>Sitúa tus barcos</h3>
-            <p id="colocacion">Aun no has elegido ningun barco para colocar</p>
-            <div id="tablero"></div>
+        <div>
+    
         </div>
     </div>
-    
-    
-    <script src="Vistas/script.js" ></script>
-    
 </body>
 </html>
-

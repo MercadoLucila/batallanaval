@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Vistas/styles.css">
+    <title>Batalla Naval</title>
+</head>
+<body>
+    
+    <div class="contenedor">
+        
+        <div>
+            <div class="box1">
+                <h1>Batalla Naval</h1>
+                <h3>Elegir barco</h3>
+                <table class="cant">
+                    <tr><td>Cant. barcos a posicionar</td>
+                        <td id="cantidad_barcos"></td>
+                    </tr>
+                </table>
+                <table class="datos">
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Tamaño</td>
+                        <td>Cantidad</td>
+                    </tr>
+                    <tr>
+                        <td>Grande</td>
+                        <td>6 celdas</td>
+                        <td id="cantidad_grande"></td>
+                        <td><button value="grande" onclick="elegirBarco(this)" >Colocar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Mediano</td>
+                        <td>3 celdas</td>
+                        <td id="cantidad_mediano"></td>
+                        <td><button value="mediano" onclick="elegirBarco(this)" >Colocar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Chico</td>
+                        <td>2 celdas</td>
+                        <td id="cantidad_chico"></td>
+                        <td><button value="chico" onclick="elegirBarco(this)" >Colocar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Barquito</td>
+                        <td>1 celda</td>
+                        <td id="cantidad_barquito"></td>
+                        <td><button value="barquito" data-image="img4" onclick="elegirBarco(this)" >Colocar</button></td>
+                        <img id="img4" src="Vistas/imagenes/barquito.png" alt="Imagen para mover" class="movable-image" />
+
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+        <div class="box2">
+            <h3>Sitúa tus barcos</h3>
+            <p id="colocacion"></p>
+            <div id="tablero"></div>
+        </div>
+    </div>
+    
+    
+    <script src="Vistas/script.js" ></script>
+    
+</body>
+</html>
+

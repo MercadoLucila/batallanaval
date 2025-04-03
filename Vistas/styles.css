@@ -82,6 +82,11 @@ h3{
     border: none;
 }
 
+.barco-colocado {
+    background-color: blue !important;
+    border: 2px solid navy !important;
+}
+
 .box2 button:hover{
     background-color: rgba(48, 114, 94, 0.5);
 }
